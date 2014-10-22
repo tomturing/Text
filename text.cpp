@@ -9,7 +9,7 @@ struct word{
 	int num;
 	struct word *next;
 };
-void readfile(struct word*&head)
+void readfile(struct word *&head)
 {
 	FILE *fp;
 	if((fp=fopen("in.txt","r"))==NULL)
@@ -54,7 +54,7 @@ void readfile(struct word*&head)
 		}
 	}
 }
-void sort(struct word*&head)
+void sort(struct word *&head)
 {    
 	struct word *q;
 	int a[10],i;

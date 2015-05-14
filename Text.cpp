@@ -12,9 +12,9 @@ struct word{
 void readfile(struct word *&head)
 {
 	FILE *fp;
-	if((fp=fopen("in.txt","r"))==NULL)
+	if((fp=fopen("Input.txt","r"))==NULL)
 	{ 
-		printf("没有这个文件!\n");
+		printf("No such file!\n");
 		exit(0);
 	}
 	char ch,temp[30];
@@ -60,7 +60,7 @@ void sort(struct word *&head)
 	int a[10],i;
 	for(i=0;i<10;i++)
 		a[i]=0;
-	printf("文章中出现频率最高的十个单词如下:\n");
+	printf("The highest frequency of ten words that appear in the article as follows:\n");
 	for(i=0;i<10;i++)
 	{ 
 		q=head;
@@ -77,7 +77,7 @@ void sort(struct word *&head)
 			if(a[i]==q->num)
 			{ 
 				q->num=0;
-				printf("出现频率:%d\t",a[i]);
+				printf("The frequency of occurrence:%d\t",a[i]);
 				puts(q->name);
 				break;
 			} 
